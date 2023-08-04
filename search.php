@@ -53,23 +53,23 @@ $searchFeacher=mysqli_real_escape_string($conn,$_POST['searchFeacherBy']);
                             if(!empty($rowMain['i1'])){
                                 $img=base64_encode($rowMain['i1']);
                             
-                                echo '<img src="data:image/jpeg;base64,'.$img.'"/>';
+                                echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';
                                 //$img = resize_image(‘/path/to/some/image.jpg’, 200, 200);
                             }
                             if(!empty($row['i2'])){
                                 $img=base64_encode($rowMain['i2']);
                             
-                                echo '<img src="data:image/jpeg;base64,'.$img.'"/>';        
+                                echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500">';        
                             }
                             if(!empty($row['i3'])){
                                 $img=base64_encode($rowMain['i3']);
                             
-                                echo '<img src="data:image/jpeg;base64,'.$img.'"/>';        
+                                echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';        
                             }
                             if(!empty($row['i4'])){
                                 $img=base64_encode($rowMain['i4']);
                             
-                                echo '<img src="data:image/jpeg;base64,'.$img.'"/>';        
+                                echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';        
                             }
                             
                             
