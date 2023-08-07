@@ -2,13 +2,12 @@
     include 'header.php';
 ?>
 
-<h1>Search Page</h1>
+<h1 class="subtitles">Search Page</h1>
 
 <div class="article-container">
 <?php
 
 $searchFeatureTbl= mysqli_real_escape_string($conn,$_POST['searchBy']);
-//$searchFeatureTbl=mysqli_real_escape_string($conn,$_POST['searchBy']);
 $resultTbl=mysqli_real_escape_string($conn,$_POST['searchOnTbl']);
 $searchFeacher=mysqli_real_escape_string($conn,$_POST['searchFeacherBy']);
 
@@ -19,10 +18,6 @@ $searchFeacher=mysqli_real_escape_string($conn,$_POST['searchFeacherBy']);
         $sql="SELECT * FROM $searchFeatureTbl WHERE $searchFeacher LIKE '$search'";
         $result=mysqli_query($conn,$sql);
         $queryResult=mysqli_num_rows($result);
-
-       /* $sqlMain="SELECT * FROM color_7_days_old WHERE colorCombID LIKE '%$search'";
-        $resultMain=mysqli_query($conn,$sqlMain);
-        $queryResultMain=mysqli_num_rows($resultMain);*/
 
         if($queryResult>0)
         {
@@ -56,17 +51,17 @@ $searchFeacher=mysqli_real_escape_string($conn,$_POST['searchFeacherBy']);
                                 echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';
                                 //$img = resize_image(‘/path/to/some/image.jpg’, 200, 200);
                             }
-                            if(!empty($row['i2'])){
+                            if(!empty($rowMain['i2'])){
                                 $img=base64_encode($rowMain['i2']);
                             
                                 echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500">';        
                             }
-                            if(!empty($row['i3'])){
+                            if(!empty($rowMain['i3'])){
                                 $img=base64_encode($rowMain['i3']);
                             
                                 echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';        
                             }
-                            if(!empty($row['i4'])){
+                            if(!empty($rowMain['i4'])){
                                 $img=base64_encode($rowMain['i4']);
                             
                                 echo '<img src="data:image/jpeg;base64,'.$img.'"/ height="500" >';        

@@ -8,3 +8,4 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 <body>
+    <h1 class="header">Fungi Dataset</h1>
